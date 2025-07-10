@@ -54,7 +54,7 @@
                 <version>3.4.2</version>
                 <configuration>
                     <to>
-                        <image>876738714078.dkr.ecr.ap-southeast-2.amazonaws.com/lokesh22/devops</image>
+                        <image>876738714078.dkr.ecr.ap-southeast-2.amazonaws.com/lokesh22/devops:${version}</image>
                     </to>
                 </configuration>
             </plugin>
