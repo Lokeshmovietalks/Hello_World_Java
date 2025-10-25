@@ -54,7 +54,12 @@
                 <version>3.4.2</version>
                 <configuration>
                     <to>
-                        <image>876738714078.dkr.ecr.ap-southeast-2.amazonaws.com/lokesh22/devops:${version}</image>
+                        <image>paps0903/helloWorld:25Oct</image>
+                        <auth>
+                                 <username>paps0903</username>
+                                 <password>Reddylokesh@22</password>
+                        </auth>
+                             
                     </to>
                 </configuration>
             </plugin>
