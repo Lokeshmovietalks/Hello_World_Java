@@ -6,7 +6,7 @@ pipeline{
         }
     }
     stages{
-        stage('github checkout'){
+        stage('github-checkout'){
             steps{
                 git url: 'https://github.com/Lokeshmovietalks/Hello_World_Java.git', branch: 'master'
             }
