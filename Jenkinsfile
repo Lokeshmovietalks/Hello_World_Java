@@ -11,7 +11,7 @@ pipeline{
                 git url: 'https://github.com/Lokeshmovietalks/Hello_World_Java.git', branch: 'master'
             }
         }
-        stage('maven build'){
+        stage('maven-build'){
             steps{
                 sh 'mvn clean compile jib:build -Dimage=paps0903/helloworld:oct26'
             }
