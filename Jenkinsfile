@@ -13,7 +13,7 @@ pipeline{
         }
         stage('maven build'){
             steps{
-                sh 'mvn clean compile jib:build -Dimage=paps0903/helloworld:oct26'
+                sh 'mvn clean compile jib:build -Dimage=paps0903/helloworld:oct28'
             }
         }
     }
