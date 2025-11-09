@@ -2,7 +2,6 @@ pipeline{
     agent{
         label 'dev_node'
         }
-    }
     stages{
         stage('github-checkout'){
             steps{
