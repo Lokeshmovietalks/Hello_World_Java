@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'dev_node'
+        label 'Dev_Node'
         }
     stages{
         stage('github-checkout'){
