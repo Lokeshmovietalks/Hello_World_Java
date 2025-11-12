@@ -14,5 +14,10 @@ pipeline{
                 sh 'mvn clean package'
             }
         }
+        stage('Nexus Deploy'){
+            steps{
+                sh 'mvn deploy'
+            }
+        }
     }
 }
