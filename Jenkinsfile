@@ -1,10 +1,7 @@
 pipeline{
     agent{
-        docker{
-            image 'maven'
-            args '-u 0 -v $HOME/.m2:/root/.m2'
+        label 'Dev_Node'
         }
-    }
     stages{
         stage('github-checkout'){
             steps{
@@ -13,7 +10,13 @@ pipeline{
         }
         stage('maven build'){
             steps{
-                sh 'mvn clean compile jib:build -Dimage=paps0903/helloworld:oct28'
+                sh 'mvn -v'
+                sh 'mvn clean package'
+            }
+        }
+        stage('Nexus Deploy'){
+            steps{
+                sh 'mvn deploy'
             }
         }
     }
