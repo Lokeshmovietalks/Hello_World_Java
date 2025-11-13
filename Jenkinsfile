@@ -24,7 +24,7 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'nexus-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]){
                     sh '''
                 echo "Downloading jar form nexus"
-                curl -u "$USER:$PASS" -O http://3.26.170.41:8081/repository/helloworld_release/com/rushi/hello-world/0.0.2/hello-world-0.0.2.jar
+                curl -u "$USER:$PASS" -O http://3.26.170.41:8081/repository/helloworld_release/com/rushi/hello-world/0.0.3/hello-world-0.0.3.jar
                 '''
                 } 
             }
@@ -33,7 +33,8 @@ pipeline{
             steps{
                 sh '''
                 echo "Building Docker image"
-                docker build -t helloworld:nov13 .
+                docker build -t helloworld:nov13v3 .
+		docker run -d -p 8080:8080 helloworld:nov13v3
                 '''
             }
         }
