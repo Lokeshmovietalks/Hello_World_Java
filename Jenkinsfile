@@ -44,6 +44,7 @@ pipeline{
 					sh '''
 					echo "$DOCKPASS" | docker login -u "$DOCKUSER" --password-stdin
 					docker push $DOCKUSER/helloworld:nov15v3
+					'''
 				}
 			}
 		}
