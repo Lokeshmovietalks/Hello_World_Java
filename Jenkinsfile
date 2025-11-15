@@ -33,10 +33,19 @@ pipeline{
             steps{
                 sh '''
                 echo "Building Docker image"
-                docker build -t helloworld:nov13v3 .
-		docker run -d -p 8080:8080 helloworld:nov13v3
+                docker build -t helloworld:nov15v3 .
+			#	docker run -d -p 8080:8080 helloworld:nov13v3
                 '''
             }
         }
+		stage("Docker Push"){
+			steps{
+				withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'DOCKUSER', passwordVariable: 'DOCKPASS')]){
+					sh '''
+					echo "$DOCKPASS" | docker login -u "$DOCKUSER" --password-stdin
+					docker push $DOCKUSER/helloworld:nov15v3
+				}
+			}
+		}
     }
 }
