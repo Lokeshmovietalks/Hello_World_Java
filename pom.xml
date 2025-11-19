@@ -44,12 +44,12 @@
 <distributionManagement>
         <snapshotRepository>
                 <id>nexus</id>
-                <url>http://10.0.0.23:8081/repository/helloworld_snapshot/</url>
+                <url>http://172.31.21.82:8081/repository/helloworld_snapshot/</url>
         </snapshotRepository>
 
         <repository>
                 <id>nexus</id>
-                <url>http://10.0.0.23:8081/repository/helloworld_release/</url>
+                <url>http://172.31.21.82:8081/repository/helloworld_release/</url>
         </repository>
 </distributionManagement>
     <build>
