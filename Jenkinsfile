@@ -24,7 +24,7 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'nexus-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]){
                     sh '''
                 echo "Downloading jar form nexus"
-                curl -u "$USER:$PASS" -O http://3.26.34.178:8081/repository/helloworld_release/com/rushi/hello-world/0.0.3/hello-world-0.0.3.jar
+                curl -u "$USER:$PASS" -O http://13.211.53.180:8081/repository/helloworld_release/com/rushi/hello-world/0.0.3/hello-world-0.0.3.jar
                 '''
                 } 
             }
