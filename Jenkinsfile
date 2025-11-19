@@ -43,8 +43,8 @@ pipeline{
 				withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'DOCKUSER', passwordVariable: 'DOCKPASS')]){
 					sh '''
 					echo "$DOCKPASS" | docker login -u "$DOCKUSER" --password-stdin
-					docker build -t $DOCKUSER/helloworld:nov15v3 .
-					docker push $DOCKUSER/helloworld:nov15v3
+					docker build -t $DOCKUSER/helloworld:nov19v3 .
+					docker push $DOCKUSER/helloworld:nov19v3
 					'''
 				}
 			}
