@@ -3,5 +3,8 @@ kind: Pod
 metadata:
   name: myapp
   labels:
-    app: hello-wolrd
+    app: hello-world
 spec:
+  containers:
+    - name: hello-world
+      image: paps0903/helloworld:nov19v3
