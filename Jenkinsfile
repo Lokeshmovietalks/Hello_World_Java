@@ -49,5 +49,12 @@ pipeline{
 				}
 			}
 		}
+		stage('Kubernetes Deployment'){
+			steps{
+				sh '''echo "Kuberneted Pod Creation"
+				kubectl apply -f k8s/pod.yaml 
+				'''
+			}
+		}
     }
 }
