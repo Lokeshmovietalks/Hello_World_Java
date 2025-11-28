@@ -16,7 +16,7 @@ pipeline{
         }
         stage('Nexus Deploy'){
             steps{
-                sh 'mvn deploy'
+                sh 'mvn deploy -X'
             }
         }
         stage('Nexus Download'){
