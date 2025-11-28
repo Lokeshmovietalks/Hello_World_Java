@@ -19,7 +19,7 @@ pipeline{
                 sh 'mvn deploy'
             }
         }
-        /*stage('Nexus Download'){
+        stage('Nexus Download'){
             steps{
                 withCredentials([usernamePassword(credentialsId: 'nexus-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]){
                     sh '''
@@ -28,7 +28,7 @@ pipeline{
                 '''
                 } 
             }
-        }*/
+        }
         /*stage('Docker Build'){
             steps{
                 sh '''
